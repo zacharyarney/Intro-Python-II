@@ -1,9 +1,11 @@
 from room import Room
+from player import Player
+from item import Item
 
 # Declare all the rooms
 
 room = {
-    'outside':  Room("Outside Cave Entrance", "North of you, the cave mount beckons"),
+    'outside':  Room("Outside The Cave Entrance", "North of you, the cave mount beckons."),
 
     'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
 passages run north and east."""),
@@ -37,6 +39,7 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
+player = Player(room['outside'])
 
 # Write a loop that:
 #
@@ -48,3 +51,34 @@ room['treasure'].s_to = room['narrow']
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+while True:
+    if player.location == room['outside']:
+        input(f'''You are {player.location.name}.
+{player.location.description}
+        
+Where would you like to go from here?
+[N]orth
+[S]outh
+[E]ast
+[W]est
+>>> ''')
+    elif player.location == room['overlook']:
+        input(f'''You are at the {player.location.name}.
+{player.location.description}
+        
+Where would you like to go from here?
+[N]orth
+[S]outh
+[E]ast
+[W]est
+>>> ''')
+    else:
+        input(f'''You are in the {player.location.name}.
+{player.location.description}
+        
+Where would you like to go from here?
+[N]orth
+[S]outh
+[E]ast
+[W]est
+>>> ''')
