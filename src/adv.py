@@ -54,6 +54,12 @@ player = Player(room['outside'])
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+directions = ['n', 's', 'e', 'w']
+quit_commands = ['q', 'quit']
+yes = ['y', 'yes']
+no = ['n', 'no']
+wrong_way_msg = 'There is nothing over there... You ok?'
+bad_input_msg = 'What was that?'
 while True:
     if player.location == room['outside']:
         input(f'''You are {player.location.name}.
