@@ -75,9 +75,18 @@ while True:
 [W]est
 >>> ''').lower()
 
-        input(f'''You are at the {player.location.name}.
-{player.location.description}
-        
+    # Quit game
+    if user_input in quit_commands:
+        clear()
+        quit_input = input("""It's a long way home. Are you sure you want to leave?
+[Y]es
+[N]o
+>>> """).lower()
+        if user_input in yes:
+            break
+        elif user_input in no:
+            pass
+
 Where would you like to go from here?
 [N]orth
 [S]outh
