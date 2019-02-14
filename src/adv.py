@@ -87,19 +87,28 @@ while True:
         elif user_input in no:
             pass
 
-Where would you like to go from here?
-[N]orth
-[S]outh
-[E]ast
-[W]est
->>> ''')
+    # Travel from room to room
+    elif user_input in directions:
+        if user_input == 'n':
+            if hasattr(player.location, 'n_to'):
+                player.location = player.location.n_to
+            else:
+                input_error(wrong_way_msg)
+        elif user_input == 's':
+            if hasattr(player.location, 's_to'):
+                player.location = player.location.n_to
+            else:
+                input_error(wrong_way_msg)
+        elif user_input == 'e':
+            if hasattr(player.location, 'e_to'):
+                player.location = player.location.n_to
+            else:
+                input_error(wrong_way_msg)
+        elif user_input == 'w':
+            if hasattr(player.location, 'w_to'):
+                player.location = player.location.n_to
+            else:
+                input_error(wrong_way_msg)
+
     else:
-        input(f'''You are in the {player.location.name}.
-{player.location.description}
-        
-Where would you like to go from here?
-[N]orth
-[S]outh
-[E]ast
-[W]est
->>> ''')
+        input_error(bad_input_msg)
