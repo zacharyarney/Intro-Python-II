@@ -60,18 +60,21 @@ yes = ['y', 'yes']
 no = ['n', 'no']
 wrong_way_msg = 'There is nothing over there... You ok?'
 bad_input_msg = 'What was that?'
+
+
+fast_animation(splash)
+
+
 while True:
-    if player.location == room['outside']:
-        input(f'''You are {player.location.name}.
-{player.location.description}
-        
-Where would you like to go from here?
+    player.get_location()
+
+    user_input = input(f'''Where would you like to go from here?
 [N]orth
 [S]outh
 [E]ast
 [W]est
->>> ''')
-    elif player.location == room['overlook']:
+>>> ''').lower()
+
         input(f'''You are at the {player.location.name}.
 {player.location.description}
         
