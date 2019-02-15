@@ -22,6 +22,4 @@ class Room:
     #     return f'{self.name}'
 
     # def set_room(self, room, direction):
-    #     self[direction.lower()] = room 
-        
-    
+    #     self[direction.lower()] = room
