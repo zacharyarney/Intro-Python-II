@@ -6,7 +6,12 @@ def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
-def input_error(msg):
+def new_page(msg):
     clear()
     print(msg)
-    time.sleep(2)
+
+
+def response(msg):
+    clear()
+    print(msg)
+    time.sleep(1.5)
