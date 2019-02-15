@@ -62,53 +62,59 @@ wrong_way_msg = 'There is nothing over there... You ok?'
 bad_input_msg = 'What was that?'
 
 
-fast_animation(splash)
+def run():
+    while True:
+        player.get_location()
 
+        user_input = input(f'''What would you like to do here?
+Travel? Pick a direction to walk in:
+[N]orth [S]outh [E]ast [W]est
 
-while True:
-    player.get_location()
-
-    user_input = input(f'''Where would you like to go from here?
-[N]orth
-[S]outh
-[E]ast
-[W]est
+[L]ook for items? A room could contain many items,
+but you'll only find them if you look.
 >>> ''').lower()
 
-    # Quit game
-    if user_input in quit_commands:
-        clear()
-        quit_input = input("""It's a long way home. Are you sure you want to leave?
+        # Quit game
+        if user_input in quit_commands:
+            clear()
+            quit_input = input("""It's a long way home. Are you sure you want to leave?
 [Y]es
 [N]o
 >>> """).lower()
-        if user_input in yes:
-            break
-        elif user_input in no:
-            pass
+            if quit_input in yes:
+                clear()
+                return
+            elif quit_input in no:
+                pass
 
-    # Travel from room to room
-    elif user_input in directions:
-        if user_input == 'n':
-            if hasattr(player.location, 'n_to'):
-                player.location = player.location.n_to
-            else:
-                input_error(wrong_way_msg)
-        elif user_input == 's':
-            if hasattr(player.location, 's_to'):
-                player.location = player.location.n_to
-            else:
-                input_error(wrong_way_msg)
-        elif user_input == 'e':
-            if hasattr(player.location, 'e_to'):
-                player.location = player.location.n_to
-            else:
-                input_error(wrong_way_msg)
-        elif user_input == 'w':
-            if hasattr(player.location, 'w_to'):
-                player.location = player.location.n_to
-            else:
-                input_error(wrong_way_msg)
+        # Travel from room to room
+        elif user_input in directions:
+            if user_input == 'n':
+                if hasattr(player.location, 'n_to'):
+                    player.location = player.location.n_to
+                else:
+                    input_error(wrong_way_msg)
+            elif user_input == 's':
+                if hasattr(player.location, 's_to'):
+                    player.location = player.location.s_to
+                else:
+                    input_error(wrong_way_msg)
+            elif user_input == 'e':
+                if hasattr(player.location, 'e_to'):
+                    player.location = player.location.e_to
+                else:
+                    input_error(wrong_way_msg)
+            elif user_input == 'w':
+                if hasattr(player.location, 'w_to'):
+                    player.location = player.location.w_to
+                else:
+                    input_error(wrong_way_msg)
 
-    else:
-        input_error(bad_input_msg)
+        else:
+            input_error(bad_input_msg)
+
+
+fast_animation(splash)
+
+
+run()
