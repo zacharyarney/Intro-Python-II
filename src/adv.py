@@ -69,6 +69,8 @@ directions = ['n', 's', 'e', 'w']
 quit_commands = ['q', 'quit']
 yes = ['y', 'yes']
 no = ['n', 'no']
+look = ['l', 'look']
+inv = ['i', 'inventory', 'items']
 wrong_way_msg = 'There is nothing over there... You ok?'
 bad_input_msg = 'What was that?'
 
@@ -78,11 +80,11 @@ def run():
         player.get_location()
 
         user_input = input(f'''What would you like to do here?
-Travel? Pick a direction to walk in:
-[N]orth [S]outh [E]ast [W]est
 
-[L]ook for items? A room could contain many items,
-but you'll only find them if you look.
+[L]ook for items :: Check [I]nventory
+
+Pick a direction to walk in:
+[N]orth [S]outh [E]ast [W]est
 >>> ''').lower()
 
         # Quit game
@@ -125,8 +127,14 @@ but you'll only find them if you look.
                 else:
                     response(wrong_way_msg)
 
+        elif user_input in look:
+            player.look()
+
+        elif user_input in inv:
+            player.get_inventory()
+
         else:
-            input_error(bad_input_msg)
+            response(bad_input_msg)
 
 
 fast_animation(splash)
