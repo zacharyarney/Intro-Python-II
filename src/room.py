@@ -1,3 +1,4 @@
+from functions import *
 # Implement a class to hold room information. This should have name and
 # description attributes.
 
@@ -16,7 +17,7 @@ class Room:
         # self.w_to = None
 
     def get_info(self):
-        print(f'{self.grammar}{self.name}.\n{self.description}\n')
+        new_page(f'{self.grammar}{self.name}.\n{self.description}\n')
 
     # def __str__(self):
     #     return f'{self.name}'
