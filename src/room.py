@@ -9,11 +9,11 @@ class Room:
         self.items = items
         self.grammar = grammar
 
-        # directions
-        self.n_to = None
-        self.s_to = None
-        self.e_to = None
-        self.w_to = None
+        # # directions
+        # self.n_to = None
+        # self.s_to = None
+        # self.e_to = None
+        # self.w_to = None
 
     def get_info(self):
         print(f'{self.grammar}{self.name}.\n{self.description}\n')
