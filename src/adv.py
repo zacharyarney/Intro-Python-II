@@ -2,8 +2,7 @@ from room import Room
 from player import Player
 from item import Item
 from animations import *
-from functions import clear
-from functions import input_error
+from functions import *
 
 # Declare all items
 item = {
