@@ -5,20 +5,32 @@ from animations import *
 from functions import clear
 from functions import input_error
 
-# Declare all the rooms
+# Declare all items
+item = {
+    'gold': Item('Gold-ish Coin', 'Is that gold? Hard to tell in this light.'),
+    'pants': Item('Pair Of Pants', 'Hey, these are actually pretty nice! Dry clean only, though.'),
+    'sword': Item('Rusty Sword', '''You could definitely kill something with this.
+The question is... Do you have the guts?'''),
+    'wallet': Item('Your Wallet', 'Do you remember dropping this?'),
+    'bone': Item('Bone', 'This is way to big to be human.'),
+    'plastic': Item('Piece Of Plastic', '''Looks like this might be the arm from an action figure...
+but it's too chewed up to say for sure.'''),
+    'food': Item('Some Food', 'Are you really going to eat that?')
+}
 
+# Declare all the rooms
 room = {
     'outside':  Room('Outside The Cave Entrance', 'North of you, the cave mount beckons.', grammar='You are '),
 
     'foyer':    Room('Foyer', '''Dim light filters in from the south. Dusty
-passages run north and east.'''),
+passages run north and east.''', items=[item['gold'], item['bone']]),
 
     'overlook': Room('Grand Overlook', '''A steep cliff appears before you, falling
 into the darkness. Ahead to the north, a light flickers in
-the distance, but there is no way across the chasm.''', grammar='You are at the '),
+the distance, but there is no way across the chasm.''', grammar='You are at the ', items=[item['food'], item['sword'], item['gold']]),
 
     'narrow':   Room('Narrow Passage', '''The narrow passage bends here from west
-to north. The smell of gold permeates the air.'''),
+to north. The smell of gold permeates the air.''', items=[item['pants'], item['pants'], item['gold'], item['plastic']]),
 
     'treasure': Room('Treasure Chamber', '''You've found the long-lost treasure
 chamber! Sadly, it has already been completely emptied by
