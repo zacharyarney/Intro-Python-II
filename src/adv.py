@@ -103,23 +103,27 @@ but you'll only find them if you look.
             if user_input == 'n':
                 if hasattr(player.location, 'n_to'):
                     player.location = player.location.n_to
+                    slow_animation(walk)
                 else:
-                    input_error(wrong_way_msg)
+                    response(wrong_way_msg)
             elif user_input == 's':
                 if hasattr(player.location, 's_to'):
                     player.location = player.location.s_to
+                    slow_animation(walk)
                 else:
-                    input_error(wrong_way_msg)
+                    response(wrong_way_msg)
             elif user_input == 'e':
                 if hasattr(player.location, 'e_to'):
                     player.location = player.location.e_to
+                    slow_animation(walk)
                 else:
-                    input_error(wrong_way_msg)
+                    response(wrong_way_msg)
             elif user_input == 'w':
                 if hasattr(player.location, 'w_to'):
                     player.location = player.location.w_to
+                    slow_animation(walk)
                 else:
-                    input_error(wrong_way_msg)
+                    response(wrong_way_msg)
 
         else:
             input_error(bad_input_msg)
