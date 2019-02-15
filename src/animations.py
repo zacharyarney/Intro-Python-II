@@ -49,19 +49,7 @@ ADVENTU E''',
 '''     CAV 
 ADVENTUR ''',
 '''     CAVE
-ADVENTURE''',
-'''     
-         ''',
-'''     CAVE
-ADVENTURE''',
-'''     
-         ''',
-'''     CAVE
-ADVENTURE''',
-'''     
-         ''',
-'''     CAVE
-ADVENTURE''',
+ADVENTURE'''
 ]
 
 walk = [
@@ -70,21 +58,21 @@ walk = [
 '''o<>
 ''',
 '''o<>
-   o<>''',
-'''      o<>
-   o<>''',
-'''      o<>
-         o<>''',
-'''
-''',
-'''o<>
-         ''',
-'''o<>
-   o<>''',
-'''      o<>
-   o<>''',
-'''      o<>
-         o<>''',
+    o<>''',
+'''        o<>
+    o<>''',
+'''        o<>
+            o<>''',
+'''                o<>
+            o<>''',
+'''                o<>
+                    o<>''',
+'''                        o<>
+                    o<>''',
+'''                        o<>
+                            o<>''',
+'''                        
+                            o<>''',
 '''
 '''
 ]
@@ -93,7 +81,7 @@ def fast_animation(animation):
     clear()
     for i in range(len(animation)):
         print(animation[i])
-        time.sleep(0.2)
+        time.sleep(0.1)
         if i == len(animation) - 1:
             time.sleep(1.5)
             clear()
@@ -104,5 +92,5 @@ def slow_animation(animation):
     clear()
     for i in range(len(animation)):
         print(animation[i])
-        time.sleep(0.4)
+        time.sleep(0.3)
         clear()
