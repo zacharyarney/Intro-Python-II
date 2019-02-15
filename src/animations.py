@@ -2,78 +2,113 @@ import time
 from functions import clear
 
 splash = [
-'''         
+'''
+
         ''',
-'''         
+'''
+
         ''',
-'''         
+'''
+
         ''',
-'''         
+'''
+
         ''',
-'''         
+'''
+
         ''',
-'''         
+'''
+
 A        ''',
-'''         
+'''
+
 AD       ''',
-'''         
+'''
+
 ADV      ''',
-'''         
+'''
+
 ADVE     ''',
-'''         
+'''
+
 ADVEN    ''',
-'''     C   
+'''
+     C   
 ADVENT   ''',
-'''     CA  
+'''
+     CA  
 ADVENTU  ''',
-'''     CAV 
+'''
+     CAV 
 ADVENTUR ''',
-'''     CAVE
+'''
+     CAVE
 ADVENTURE''',
-'''     CAVE
+'''
+     CAVE
  DVENTURE''',
-'''     CAVE
+'''
+     CAVE
 A VENTURE''',
-'''     CAVE
+'''
+     CAVE
 AD ENTURE''',
-'''     CAVE
+'''
+     CAVE
 ADV NTURE''',
-'''     CAVE
+'''
+     CAVE
 ADVE TURE''',
-'''      AVE
+'''
+      AVE
 ADVEN URE''',
-'''     C VE
+'''
+     C VE
 ADVENT RE''',
-'''     CA E
+'''
+     CA E
 ADVENTU E''',
-'''     CAV 
+'''
+     CAV 
 ADVENTUR ''',
-'''     CAVE
+'''
+     CAVE
 ADVENTURE'''
 ]
 
 walk = [
-'''                             
+'''
+
                                 ''',
-'''o<>                          
+'''
+o<>                          
                                 ''',
-'''o<>                          
+'''
+o<>                          
     o<>                         ''',
-'''        o<>                  
+'''
+        o<>                  
     o<>                         ''',
-'''        o<>                  
+'''
+        o<>                  
             o<>                 ''',
-'''                o<>          
+'''
+                o<>          
             o<>                 ''',
-'''                o<>          
+'''
+                o<>          
                     o<>         ''',
-'''                        o<>  
+'''
+                        o<>  
                     o<>         ''',
-'''                        o<>  
+'''
+                        o<>  
                             o<> ''',
-'''                             
+'''
+
                             o<> ''',
-'''                             
+'''
+
                                 '''
 ]
 
